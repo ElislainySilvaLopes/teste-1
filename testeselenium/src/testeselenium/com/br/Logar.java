@@ -19,14 +19,14 @@ public class Logar {
 	
 	public void LogarNoSistema () {
 		
-		driver.get("http://localhost/SisBiblio/");
+		driver.get("http://localhost/sistemaphp/");
 		
-		WebElement usuario = driver.findElement(By.id("usuario"));
-		WebElement senha = driver.findElement(By.id("senha"));
+		WebElement usuario = driver.findElement(By.id("usu"));
+		WebElement senha = driver.findElement(By.id("pass"));
 		WebElement botaologar = driver.findElement(By.name("botao"));
 		
-		usuario.sendKeys("genissonfg@gmail.com");
-		senha.sendKeys("123mudar");
+		usuario.sendKeys("admin");
+		senha.sendKeys("admin");
 		botaologar.submit();
 	}
 

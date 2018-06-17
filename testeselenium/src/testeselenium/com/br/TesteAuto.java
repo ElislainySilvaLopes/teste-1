@@ -5,6 +5,8 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static org.junit.Assert.assertTrue; 
+
 public class TesteAuto {
 	
 	private WebDriver driver = null;
@@ -25,6 +27,9 @@ public class TesteAuto {
     	Logar Logar = new Logar(driver);
     	
     	Logar.LogarNoSistema();
+    	
+    	ManterUsuario usuarios = new ManterUsuario(driver);
+    	usuarios.cadastrar();
 		
 		
     }
