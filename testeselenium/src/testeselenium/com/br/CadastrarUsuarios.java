@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ManterUsuario {
+public class CadastrarUsuarios {
 	
 	private WebDriver driver = null;
 
-	public ManterUsuario (WebDriver driver) {
+	public CadastrarUsuarios (WebDriver driver) {
 		this.driver = driver;
 	
 	
@@ -19,14 +19,14 @@ public class ManterUsuario {
 		driver.findElement(By.linkText("Novo Contato")).click();
 		
 		
-		WebElement nome = driver.findElement(By.id("nome"));
-		WebElement idade = driver.findElement(By.id("idade"));
-		WebElement endereco = driver.findElement(By.id("endereco"));
+		WebElement camponome = driver.findElement(By.id("nome"));
+		WebElement campoidade = driver.findElement(By.id("idade"));
+		WebElement campoend = driver.findElement(By.id("endereco"));
 		WebElement botaoSalvar = driver.findElement(By.name("salvar"));
 		
-		nome.sendKeys("Luiz José Gonçalves");
-		idade.sendKeys("65");
-		endereco.sendKeys("Rua Monteiro Lobato, 75 - Cidade Nobre");
+		camponome.sendKeys("Luiz José Gonçalves");
+		campoidade.sendKeys("65");
+		campoend.sendKeys("Rua Monteiro Lobato, 75 - Cidade Nobre");
 		botaoSalvar.submit();
 		
 		

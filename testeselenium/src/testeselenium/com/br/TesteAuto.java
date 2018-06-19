@@ -28,10 +28,14 @@ public class TesteAuto {
     	
     	Logar.LogarNoSistema();
     	
-    	ManterUsuario usuarios = new ManterUsuario(driver);
+    	CadastrarUsuarios usuarios = new CadastrarUsuarios(driver);
     	usuarios.cadastrar();
+    	
+    	EditarUsuario usuarios1 = new EditarUsuario(driver);
+    	usuarios1.editar();
 		
-		
+    	DeletarUsuario usuarios2 = new DeletarUsuario(driver);
+    	usuarios2.deletar();
     }
     
 
