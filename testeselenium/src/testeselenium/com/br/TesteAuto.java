@@ -5,11 +5,14 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static org.junit.Assert.assertTrue; 
 
 public class TesteAuto {
 	
 	private WebDriver driver = null;
+	
+	String nome = "Ana Claudia";
+	String idade = "22";
+	String endereco = "rua chao molhado, 75 - esperança";
 
 	
 	@Before
@@ -29,13 +32,14 @@ public class TesteAuto {
     	Logar.LogarNoSistema();
     	
     	CadastrarUsuarios usuarios = new CadastrarUsuarios(driver);
-    	usuarios.cadastrar();
+    	usuarios.cadastrar(nome, idade, endereco);
+        //usuarios.editar();
+    	usuarios.eliminar();
     	
-    	EditarUsuario usuarios1 = new EditarUsuario(driver);
-    	usuarios1.editar();
+
 		
-    	DeletarUsuario usuarios2 = new DeletarUsuario(driver);
-    	usuarios2.deletar();
+    	//DeletarUsuario usuarios2 = new DeletarUsuario(driver);
+    	//usuarios2.deletar();
     }
     
 
